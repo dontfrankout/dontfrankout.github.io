@@ -23,6 +23,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import BusinessIcon from "@material-ui/icons/Business";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 import headshot from "../../img/headshot.jpg";
 
 const mapsKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
@@ -37,8 +39,8 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: 25,
-    width: theme.spacing(24),
-    height: theme.spacing(24),
+    width: theme.spacing(18),
+    height: theme.spacing(18),
     boxShadow: theme.shadows[10],
   },
   extendedIcon: {
@@ -60,8 +62,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Profile() {
+export default function Profile(props) {
   const classes = useStyles();
+
+  const desktop = useMediaQuery("(min-width:1000px)");
 
   return (
     <Box height="100%" className={classes.root}>
@@ -72,10 +76,11 @@ export default function Profile() {
           </div>
 
           <div style={{ flexGrow: 1 }}>
-            <Typography variant="h4">Frank Meyer</Typography>
+            <Typography variant="h4">{props.profile.name}</Typography>
             <Typography variant="h6">
-              {/* Project Manager | Business System Analyst | Manufacturing Engineer */}
-              im good at stuff whatever
+              {/* */}
+
+              {props.profile.subtitle}
             </Typography>
             {/* <iframe src={`https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=42.92954,50.51405&zoom=12`} height={200} width={200}/> */}
             <List dense>
@@ -83,19 +88,19 @@ export default function Profile() {
                 <ListItemIcon>
                   <BusinessIcon />
                 </ListItemIcon>
-                <ListItemText primary="Impact XM" />
+                <ListItemText primary={props.profile.current} />
               </ListItem>
 
               <ListItem>
                 <ListItemIcon>
                   <LocationOnIcon />
                 </ListItemIcon>
-                <ListItemText primary="New York Metropolitan Area" />
+                <ListItemText primary={props.profile.location} />
               </ListItem>
             </List>
           </div>
           <div>
-            <Box display="flex" flexDirection="column">
+            <Box display="flex" flexDirection={desktop ? "column" : "row"}>
               <Fab
                 size="medium"
                 color="primary"

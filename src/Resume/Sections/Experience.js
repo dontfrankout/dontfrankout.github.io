@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Experience(props) {
   const classes = useStyles();
 
-
   return (
     <>
       <List className={classes.root}>
@@ -36,20 +35,19 @@ export default function Experience(props) {
             <React.Fragment key={item.name}>
               <ListItem alignItems="flex-start">
                 <Link href={item.link}>
-                <ListItemAvatar>
-                  <Avatar
-                    variant="square"
-                    alt="logo"
-                    src={item.logo}
-                    className={classes.logo}
-                  />
-                </ListItemAvatar>
+                  <ListItemAvatar>
+                    <Avatar
+                      variant="square"
+                      alt="logo"
+                      src={item.logo}
+                      className={classes.logo}
+                    />
+                  </ListItemAvatar>
                 </Link>
+
                 <ListItemText
                   primary={item.name}
-                  secondary={
-                    "more info here, and fix the logo sizes. add years. add down arrow for more info"
-                  }
+                  secondary={item.description}
                 />
               </ListItem>
               {index + 1 != props.experience.length && (

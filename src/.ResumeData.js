@@ -7,6 +7,14 @@ import logo_trt from "./img/logo_trt.jpg";
 import logo_towson from "./img/logo_towson.png";
 
 export const Resume = {
+  profile: {
+    name: "Frank Meyer",
+    subtitle:
+      "Project Manager | Business System Analyst | Manufacturing Engineer ",
+    current: "Impact XM",
+    location: "New York Metropolitan Area",
+  },
+
   experience: [
     {
       name: "Impact XM",
@@ -14,7 +22,7 @@ export const Resume = {
       link: "https://impact-xm.com/",
       start: "",
       end: "",
-      description: "",
+      description: "Project Manager | Empowering Brand Experiences",
       longitude: "",
       latitude: "",
     },
@@ -25,18 +33,7 @@ export const Resume = {
       link: "https://tworivertheater.org/",
       start: "",
       end: "",
-      description: "",
-      longitude: "",
-      latitude: "",
-    },
-
-    {
-      name: "Bay Street Theater",
-      logo: logo_bst,
-      link: "http://www.baystreet.org/",
-      start: "",
-      end: "",
-      description: "",
+      description: "Technical Director | Realizing the Vision",
       longitude: "",
       latitude: "",
     },
@@ -47,10 +44,21 @@ export const Resume = {
       link: "http://www.taittowers.com/",
       start: "",
       end: "",
-      description: "",
+      description: "Rigging Department | Doing The Impossible",
       longitude: "",
       latitude: "",
     },
+
+    // {
+    //   name: "Bay Street Theater",
+    //   logo: logo_bst,
+    //   link: "http://www.baystreet.org/",
+    //   start: "",
+    //   end: "",
+    //   description: "",
+    //   longitude: "",
+    //   latitude: "",
+    // },
   ],
 
   education: [
@@ -60,7 +68,8 @@ export const Resume = {
       link: "https://www.cmu.edu/",
       start: "",
       end: "",
-      description: "",
+      description:
+        "Master of Fine Arts | Production Management and Technical Direction",
       longitude: "",
       latitude: "",
     },
@@ -71,7 +80,7 @@ export const Resume = {
       link: "https://www.towson.edu/",
       start: "",
       end: "",
-      description: "",
+      description: "Bachelor of Science | Theater Design and Production",
       longitude: "",
       latitude: "",
     },
@@ -82,7 +91,7 @@ export const Resume = {
       link: "https://www.ccbcmd.edu/",
       start: "",
       end: "",
-      description: "",
+      description: "Associates | Computer Science",
       longitude: "",
       latitude: "",
     },
@@ -112,17 +121,157 @@ export const Resume = {
     },
   ],
 
-  keyFacts: [
-    { name: "Impact XM", icon: {} },
-    { name: "New York Metropolitan Area", icon: {} },
+  languages: [
+    { name: "C (embedded)", progress: 88, color: "#178600" },
+    { name: "Javascript", progress: 90, color: "#f1e05a" },
+    { name: "Python", progress: 70, color: "#3572A5" },
+    { name: "VBA", progress: 75, color: "#867db1" },
+  ],
+  technical: [
+    { name: "Custom Fabrication Solutions", progress: 95, color: "#630942" },
+    {
+      name: "Engineering and Mechanical Design",
+      progress: 85,
+      color: "#426309",
+    },
+    { name: "Mechanical Automation Design", progress: 75, color: "#09634b" },
+    { name: "Entertainment and Arena Rigging", progress: 90, color: "#631909" },
+  ],
+  management: [
+    { name: "Creative Event Management", progress: 95, color: "#ffa962" },
+    {
+      name: "Business Process and System Design",
+      progress: 80,
+      color: "#6287ff",
+    },
+    {
+      name: "Manufacturing Process Engineering",
+      progress: 75,
+      color: "#ff6274",
+    },
+    { name: "Workplace Safety Planning", progress: 70, color: "#74ff62" },
   ],
 
-  languages: [
-    { name: "C (embedded)", progress: 85, color: "#178600" },
-    { name: "Javascript", progress: 90, color: "#f1e05a" },
-    { name: "VBA", progress: 75, color: "#867db1" },
-    { name: "CSS", progress: 20, color: "#563d7c" },
-    { name: "Markdown", progress: 40, color: "#083fa1"},
-    { name: "Typescript", progress: 55, color: "#2b7489" },
+  software: [
+    { name: "Node.js", progress: 75, color: "#339933" },
+    { name: "Vectorworks", progress: 95, color: "#00bcb4" },
+    { name: "AutoCAD", progress: 75, color: "#dd2222" },
+    { name: "Microsoft Office", progress: 99, color: "#00A4EF" },
+  ],
+
+  interests: [
+    { name: "Local Beers and Foods", progress: 100, color: "#FFC72C" },
+    { name: "Government and Public Policy", progress: 120, color: "#0a3161" },
+    { name: "Robotics and Automation", progress: 110, color: "#BB29BB" },
+    { name: "Advanced Military Technology", progress: 105, color: "#5e6638" },
+  ],
+
+  learning: [
+    { name: "R Language", progress: 10, color: "#198CE7" },
+    { name: "Azure Cognitive", progress: 40, color: "#008AD7" },
+    { name: "Machine Learning", progress: 35, color: "#00A4EF" },
+    { name: "IoT Solutions", progress: 35, color: "#346d8a" },
+  ],
+
+  projects: [
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because blah blah blah",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
+    {
+      title: "Project Title",
+      description:
+        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
+      coverUrl: "/link/to/photo",
+      photos: [
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+        { caption: "Title", link: "/link/to/photo" },
+      ],
+    },
   ],
 };
