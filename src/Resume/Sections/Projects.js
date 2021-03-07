@@ -3,12 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 import ProjectCard from "../Components/ProjectCard";
-
-const mapsKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+import ProjectModal from "../Components/ProjectModal";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 140,
   },
-  card: {
-    maxWidth: 345,
-  },
 
   box: {
     display: "flex",
@@ -35,6 +30,15 @@ const useStyles = makeStyles((theme) => ({
 export default function Projects(props) {
   const classes = useStyles();
 
+  const [currentProject, setCurrentProject] = useState(props.projects[0]);
+  const [detailOpen, setDetailOpen] = useState(false);
+
+  const handleCardClick = (index) => {
+    console.log("handling card click");
+    setCurrentProject(props.projects[index]);
+    setDetailOpen(true);
+  };
+
   return (
     <Box height="100%" className={classes.root}>
       <div className={classes.root}>
@@ -43,17 +47,30 @@ export default function Projects(props) {
             Selected Projects
           </Typography>
           <Typography variant="subtitle1" className={classes.title}>
-            Click any project to see more detail. Some of my coolest work can't
-            be displayed publically, so reach out if you want to hear more.
+            Click on a project to see more!
           </Typography>
+          <Typography variant="subtitle2" className={classes.title}>
+            (Unfortunately some of my coolest work can't be displayed publicly.
+            Please reach out if you want to learn more.)
+          </Typography>
+
+          <ProjectModal
+            open={detailOpen}
+            setOpen={setDetailOpen}
+            project={currentProject}
+          />
         </Box>
 
         <div className={classes.root}>
-          <Grid container spacing={3}>
+          <Grid container spacing={1}>
             {props.projects.map((item, index) => {
               return (
-                <Grid item xs={12} sm={6} md={4}>
-                  <ProjectCard project={item}/>
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <ProjectCard
+                    project={item}
+                    onSelect={handleCardClick}
+                    index={index}
+                  />
                 </Grid>
               );
             })}

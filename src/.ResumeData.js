@@ -6,6 +6,8 @@ import logo_tait from "./img/logo_tait.png";
 import logo_trt from "./img/logo_trt.jpg";
 import logo_towson from "./img/logo_towson.png";
 
+import { Projects } from "./.ProjectData";
+
 export const Resume = {
   profile: {
     name: "Frank Meyer",
@@ -22,7 +24,7 @@ export const Resume = {
       link: "https://impact-xm.com/",
       start: "",
       end: "",
-      description: "Project Manager | Empowering Brand Experiences",
+      description: "Senior Project Manager | Empowering Brand Experiences",
       longitude: "",
       latitude: "",
     },
@@ -149,7 +151,7 @@ export const Resume = {
       progress: 75,
       color: "#ff6274",
     },
-    { name: "Workplace Safety Planning", progress: 70, color: "#74ff62" },
+    { name: "Production Facility Planning", progress: 70, color: "#74ff62" },
   ],
 
   software: [
@@ -169,109 +171,9 @@ export const Resume = {
   learning: [
     { name: "R Language", progress: 10, color: "#198CE7" },
     { name: "Azure Cognitive", progress: 40, color: "#008AD7" },
-    { name: "Machine Learning", progress: 35, color: "#00A4EF" },
+    { name: "Machine Learning", progress: 35, color: "#054907" },
     { name: "IoT Solutions", progress: 35, color: "#346d8a" },
   ],
 
-  projects: [
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because blah blah blah",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-    {
-      title: "Project Title",
-      description:
-        "A Fairly Long Text Description Goes Here For The Front Of The Card. This was a really cool project because",
-      coverUrl: "/link/to/photo",
-      photos: [
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-        { caption: "Title", link: "/link/to/photo" },
-      ],
-    },
-  ],
+  projects: Projects,
 };

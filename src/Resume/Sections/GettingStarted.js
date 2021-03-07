@@ -1,18 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import Avatar from "@material-ui/core/Avatar";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Box from "@material-ui/core/Box";
-
-import Typography from "@material-ui/core/Typography";
-
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
-import SearchIcon from "@material-ui/icons/Search";
 
 const useStyles = makeStyles((theme) => ({
   root: {

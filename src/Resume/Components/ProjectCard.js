@@ -7,22 +7,43 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+
+import Chip from "@material-ui/core/Chip";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    boxShadow: theme.shadows[8],
+    flexGrow: 2,
+    flexShrink: 3,
+    boxShadow: theme.shadows[5],
   },
   media: {
-    height: 140,
+    height: 0,
+    paddingTop: "75%", // 16:9
+  },
+  avatar: {
+    backgroundColor: "#ee7623",
+  },
+  chips: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  chip: {
+    margin: 1,
   },
 }));
 
 export default function MediaCard(props) {
   const classes = useStyles();
 
+  const handleClick = () => {
+    props.onSelect(props.index);
+  };
+
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
+    <Card square className={classes.root}>
+      <CardActionArea onClick={handleClick}>
         <CardMedia
           className={classes.media}
           image="/static/images/cards/contemplative-reptile.jpg"
@@ -33,18 +54,25 @@ export default function MediaCard(props) {
             {props.project.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          {props.project.description}
+            {props.project.description.substring(0, 140) + "..."}
           </Typography>
         </CardContent>
       </CardActionArea>
-      {/* <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions> */}
+      <CardActions>
+        <Box className={classes.chips}>
+          {props.project.skills.map((skill, index) => {
+            return (
+              <Chip
+                key={index}
+                label={skill.name}
+                size="small"
+                className={classes.chip}
+              />
+            );
+          })}
+        </Box>
+      </CardActions>
     </Card>
   );
 }
+<Chip label="Basic" />;

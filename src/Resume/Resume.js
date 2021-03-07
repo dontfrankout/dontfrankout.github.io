@@ -39,13 +39,13 @@ export default function Home() {
       <Grid container spacing={1}>
         <br />
         <Grid item xs={12}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Profile profile={Resume.profile} />
           </Paper>
         </Grid>
         <br />
         <Grid item xs={12} sm={6}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Typography variant="h5" className={classes.title}>
               Selected Experience
             </Typography>
@@ -54,7 +54,7 @@ export default function Home() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" squar>
             <Typography variant="h5" className={classes.title}>
               Education
             </Typography>
@@ -66,7 +66,7 @@ export default function Home() {
         <br />
 
         <Grid item xs={12} sm={6} md={4}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Typography variant="h5" className={classes.title}>
               Management
             </Typography>
@@ -75,7 +75,7 @@ export default function Home() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Typography variant="h5" className={classes.title}>
               Technical
             </Typography>
@@ -85,7 +85,7 @@ export default function Home() {
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Typography variant="h5" className={classes.title}>
               Software
             </Typography>
@@ -94,16 +94,16 @@ export default function Home() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Typography variant="h5" className={classes.title}>
-              Programming
+              Code
             </Typography>
 
             <Proficiency list={Resume.languages} />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Typography variant="h5" className={classes.title}>
               Interests
             </Typography>
@@ -112,7 +112,7 @@ export default function Home() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Typography variant="h5" className={classes.title}>
               Learning
             </Typography>
@@ -121,7 +121,7 @@ export default function Home() {
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper variant="outlined" square elevation={10}>
+          <Paper variant="outlined" square>
             <Projects projects={Resume.projects} />
           </Paper>
         </Grid>

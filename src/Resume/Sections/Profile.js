@@ -27,8 +27,6 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import headshot from "../../img/headshot.jpg";
 
-const mapsKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: 5,
@@ -77,7 +75,7 @@ export default function Profile(props) {
 
           <div style={{ flexGrow: 1 }}>
             <Typography variant="h4">{props.profile.name}</Typography>
-            <Typography variant="h6">
+            <Typography variant="h5">
               {/* */}
 
               {props.profile.subtitle}

@@ -44,7 +44,7 @@ function CircularProgressWithLabel(props) {
       <CircularProgress
         variant={determinate ? "indeterminate" : "determinate"}
         value={value}
-        thickness={labelText ? 5 : 8}
+        thickness={labelText ? 8 : 12}
         style={{ color: props.color }}
       />
       <Box
