@@ -8,6 +8,8 @@ import Grid from "@material-ui/core/Grid";
 import ProjectCard from "../Components/ProjectCard";
 import ProjectModal from "../Components/ProjectModal";
 
+import {gaEvent} from "../../ga"
+
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: 5,
@@ -36,6 +38,7 @@ export default function Projects(props) {
   const handleCardClick = (index) => {
     console.log("handling card click");
     setCurrentProject(props.projects[index]);
+    gaEvent({ action: 'portfolio_open', category: 'engagement', label: currentProject.title , value: 1 })
     setDetailOpen(true);
   };
 

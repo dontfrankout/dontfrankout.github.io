@@ -2,7 +2,6 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 
 const DoughnutChart = (props) => {
-  console.log(props.data);
 
   const values = props.data.map((item) => {
     return item.progress;

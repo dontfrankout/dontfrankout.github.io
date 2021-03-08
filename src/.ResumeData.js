@@ -46,7 +46,7 @@ export const Resume = {
       link: "http://www.taittowers.com/",
       start: "",
       end: "",
-      description: "Rigging Department | Doing The Impossible",
+      description: "Rigging | Doing The Impossible",
       longitude: "",
       latitude: "",
     },
@@ -136,28 +136,28 @@ export const Resume = {
       progress: 85,
       color: "#426309",
     },
-    { name: "Mechanical Automation Design", progress: 75, color: "#09634b" },
+    { name: "Automation Control Design", progress: 80, color: "#09634b" },
     { name: "Entertainment and Arena Rigging", progress: 90, color: "#631909" },
   ],
   management: [
     { name: "Creative Event Management", progress: 95, color: "#ffa962" },
     {
       name: "Business Process and System Design",
-      progress: 80,
+      progress: 90,
       color: "#6287ff",
     },
     {
       name: "Manufacturing Process Engineering",
-      progress: 75,
+      progress: 85,
       color: "#ff6274",
     },
-    { name: "Production Facility Planning", progress: 70, color: "#74ff62" },
+    { name: "Production Facility Planning", progress: 75, color: "#74ff62" },
   ],
 
   software: [
     { name: "Node.js", progress: 75, color: "#339933" },
     { name: "Vectorworks", progress: 95, color: "#00bcb4" },
-    { name: "AutoCAD", progress: 75, color: "#dd2222" },
+    { name: "AutoCAD", progress: 80, color: "#dd2222" },
     { name: "Microsoft Office", progress: 99, color: "#00A4EF" },
   ],
 

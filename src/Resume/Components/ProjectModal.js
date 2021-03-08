@@ -15,11 +15,9 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-
-import BusinessIcon from "@material-ui/icons/Business";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 import background from "../../img/double-bubble.png";
-
 
 const useStyles = makeStyles((theme) => ({
   dialog: {
@@ -77,8 +75,6 @@ export default function MaxWidthDialog(props) {
     props.setOpen(false);
   };
 
-  console.log(props);
-
   return (
     <React.Fragment>
       <Dialog
@@ -101,7 +97,7 @@ export default function MaxWidthDialog(props) {
                   <List dense>
                     <ListItem>
                       <ListItemIcon>
-                        <BusinessIcon />
+                        <LocationOnIcon />
                       </ListItemIcon>
                       <ListItemText primary={props.project.location} />
                     </ListItem>
@@ -112,16 +108,20 @@ export default function MaxWidthDialog(props) {
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={4} md={4}>
-                <Paper className={classes.paper} square variant="outlined">
-                  <div className={classes.chartDiv}>
-                    <SkillRadar data={props.project.skills} />
-                  </div>
-                </Paper>
+                {props.project.skills && (
+                  <Paper className={classes.paper} square variant="outlined">
+                    <div className={classes.chartDiv}>
+                      <SkillRadar data={props.project.skills} />
+                    </div>
+                  </Paper>
+                )}
               </Grid>
               <Grid item xs={12} sm={6} md={4}>
-                <Paper className={classes.paper} square variant="outlined">
-                  <SimpleMap />
-                </Paper>
+                {props.project.geo && (
+                  <Paper className={classes.paper} square variant="outlined">
+                    <SimpleMap />
+                  </Paper>
+                )}
               </Grid>
 
               <Grid item xs={12}>
