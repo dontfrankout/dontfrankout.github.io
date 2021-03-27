@@ -120,11 +120,11 @@ export default function Home() {
             <Proficiency list={Resume.learning} />
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <Paper variant="outlined" square>
             <Projects projects={Resume.projects} />
           </Paper>
-        </Grid>
+        </Grid> */}
         <br />
         {/* <br /> !! */}
         <br />

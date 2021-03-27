@@ -36,7 +36,6 @@ export default function Projects(props) {
   const [detailOpen, setDetailOpen] = useState(false);
 
   const handleCardClick = (index) => {
-    console.log("handling card click");
     setCurrentProject(props.projects[index]);
     gaEvent({ action: 'portfolio_open', category: 'engagement', label: currentProject.title , value: 1 })
     setDetailOpen(true);
